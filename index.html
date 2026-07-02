@@ -69,8 +69,9 @@
 
   /* ---------- Header ---------- */
   header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid #E5DECF}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:86px}
   .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .header-logo{display:block;height:66px;width:auto;filter:drop-shadow(0 5px 12px rgba(0,0,0,.22))}
   .logo-mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(140deg,var(--gold-bright),var(--gold-deep));display:grid;place-items:center;box-shadow:0 4px 12px rgba(184,126,14,.35)}
   .logo-mark svg{width:26px;height:26px}
   .logo-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:23px;text-transform:uppercase;color:var(--ink);line-height:1}
@@ -95,6 +96,8 @@
     .logo-name{font-size:19px}
     .logo-name small{font-size:9.5px;letter-spacing:2.5px}
     .logo-mark{width:38px;height:38px}
+    .nav{height:74px}
+    .header-logo{height:54px}
   }
 
   /* ---------- Hero ---------- */
@@ -104,13 +107,17 @@
     color:var(--paper);padding:88px 0 96px;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,.25))}
   .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative;z-index:1}
+  .hero-logo{display:block;width:min(178px,42vw);height:auto;margin:0 0 20px;filter:drop-shadow(0 14px 26px rgba(0,0,0,.46))}
+  @media(max-width:560px){.hero-logo{width:132px;margin-bottom:16px}}
   .hero h1{color:var(--paper);font-size:clamp(44px,6vw,74px);font-weight:800;text-transform:uppercase}
   .hero h1 em{font-style:normal;color:var(--gold-bright)}
   .hero p.lead{margin:18px 0 30px;font-size:18px;color:#CFC8BE;max-width:520px}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  @media(max-width:560px){.hero .btn-ghost{display:none}}
   .hero-points{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;font-size:14.5px;color:#CFC8BE}
   .hero-points span{display:flex;align-items:center;gap:8px}
   .hero-points svg{width:17px;height:17px;color:var(--gold-bright);flex:none}
+  @media(max-width:560px){.hero-points{display:none}}
   .quote-card{background:var(--white);color:var(--text);border-radius:18px;padding:30px 28px;box-shadow:var(--shadow-lg)}
   .quote-card h3{font-size:27px;text-transform:uppercase;margin-bottom:4px}
   .quote-card .hint{font-size:14px;color:var(--text-soft);margin-bottom:18px}
@@ -124,6 +131,7 @@
   .call-inline{display:flex;align-items:center;justify-content:center;gap:9px;font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;color:var(--ink);text-decoration:none}
   .call-inline svg{width:21px;height:21px;color:var(--gold-deep)}
   @media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+  @media(max-width:560px){.quote-card{margin-top:76px}}
 
   /* ---------- Trust bar ---------- */
   .trust{background:var(--gold);padding:0}
@@ -232,7 +240,7 @@
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top">
-      <img src="logo.png" alt="ElDorado Junk Solutions LLC" style="height:44px">
+      <img class="header-logo" src="logo.png" alt="ElDorado Junk Solutions LLC">
     </a>
     <nav class="links">
       <a href="#services">Services</a>
@@ -252,6 +260,7 @@
 <div class="hero" id="top">
   <div class="wrap">
     <div>
+      <img class="hero-logo" src="logo.png" alt="ElDorado Junk Solutions LLC">
       <h1>You point.<br><em>We haul it away.</em></h1>
       <p class="lead">Furniture, appliances, garage full of who-knows-what — gone today. Upfront pricing, we do all the lifting, and we sweep up before we leave.</p>
       <div class="hero-ctas">
