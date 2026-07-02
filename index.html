@@ -283,7 +283,6 @@
       <div class="hint">Text us a photo of the junk — we'll reply with a firm price. No visit needed.</div>
       <form id="quoteForm">
         <div class="field"><label class="sr-only" for="qName">Your name</label><input type="text" id="qName" placeholder="Your name" required></div>
-        <div class="field"><label class="sr-only" for="qWhere">City or neighborhood</label><input type="text" id="qWhere" placeholder="City / neighborhood" required></div>
         <div class="field"><label class="sr-only" for="qWhat">What needs to go?</label><textarea id="qWhat" rows="3" placeholder="What needs to go? (e.g. couch, fridge, garage cleanout)" required></textarea></div>
         <button class="btn btn-dark" type="submit">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -326,7 +325,7 @@
       </div>
       <div class="svc">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
-        <h3>Garage &amp; house cleanouts</h3><p>Full clear-outs for moves, estates, rentals and hoarding situations.</p>
+        <h3>Estate &amp; Cleanouts</h3><p>Full property cleanouts for homes, garages, storage units, and rental properties.</p>
       </div>
       <div class="svc">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9M12 22V8M12 8a4 4 0 0 0 4-4 4 4 0 0 0-8 0 4 4 0 0 0 4 4"/></svg></div>
@@ -435,8 +434,8 @@
       </div>
       <div class="rev">
         <div class="stars">★★★★★</div>
-        <p>"Excellent communication, fair price, on time. Great experience. Will hire Eldorado Junk Solutions again. Thank You Junior."</p>
-        <div class="who">Wayne Tollerud <small>Google review</small></div>
+        <p>"I had the best experience with Eldorado Junk Solutions! I had the pleasure to meet Junior. He is such a kind soul and hard worker! I will definitely use this company again!!! Thank you for making such a stressful situation a pleasant experience!!!"</p>
+        <div class="who">Allison Williams <small>Google review</small></div>
       </div>
       <div class="rev">
         <div class="stars">★★★★★</div>
@@ -565,9 +564,8 @@
   document.getElementById("quoteForm").addEventListener("submit", e => {
     e.preventDefault();
     const name = document.getElementById("qName").value;
-    const where = document.getElementById("qWhere").value;
     const what = document.getElementById("qWhat").value;
-    const msg = `Hi, I'd like a junk removal quote. Name: ${name}. Location: ${where}. Items: ${what}. (I can text a photo too.)`;
+    const msg = `Hi, I'd like a junk removal quote. Name: ${name}. Items: ${what}. (I can text a photo too.)`;
     window.location.href = "sms:" + PHONE_DIGITS + "?&body=" + encodeURIComponent(msg);
   });
 
